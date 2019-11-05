@@ -1912,3 +1912,31 @@ create table uls_TP
       status_date   timestamp    null
 );
 
+create table uls_ant_EN
+(
+      record_type               char(2)              not null,
+      record_subtype            char(3)              not null,
+      uls_file_number           char(8)              null,
+      tower_reg_num             char(7)              not null,
+      unique_system_identifier  numeric(9,0)         not null,
+      entity_type               char(1)              not null,
+      applicant_type            char(1)              null,
+      applicant_type_code       char(50)             null,
+      license_id                char(9)              null,
+      entity_name               varchar(200)         null,
+      first_name                varchar(50)          null,
+      mi                        char(1)              null,
+      last_name                 varchar(20)          null,
+      suffix                    char(3)              null,
+      phone                     char(10)             null,
+      fax                       char(10)             null,
+      email                     varchar(50)          null,
+      address_1                 varchar(60)          null,
+      address_2                 varchar(20)          null,
+      unknown_3                 varchar(20)          null,
+      city                      varchar(20)          null,
+      state                     char(2)              null,
+      zip_code                  char(9)              null,
+      attention_line            varchar(35)          null,
+      frn                       char(10)             null
+);

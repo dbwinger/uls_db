@@ -36,6 +36,11 @@ To get db/schema.sql from https://www.fcc.gov/sites/default/files/public_access_
 * 'tinyint' => 'int'
 * 'datetime' => 'timestamp'
 
+To import data files with UTF characters:
+* Open in Sublime
+* Select File -> Reopen with Encoding -> UTF-E
+* replace " with '
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/uls_db.
