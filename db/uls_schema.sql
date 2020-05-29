@@ -11,10 +11,9 @@ create table uls_A2
       xfer_control_lessee       char(1)              null,
       revision_spectrum_lease   char(1)              null,
       assignment_spectrum_lease char(1)              null,
-      pfr_status    char(1)        null
-        
+      pfr_status        char(1)                null
+            
 );
-
 create table uls_AC
 (
       record_type               char(2)              null,
@@ -29,40 +28,40 @@ create table uls_AC
       n_number                  char(10)             null
 );
 
-
 create table uls_AD
 (
-      Record_Type                 char(2)              null,
-      unique_system_identifier    numeric(9,0)         not null,
-      ULS_File_Number             char(14)             null,
-      EBF_Number                  varchar(30)          null,
-      Application_Purpose         char(2)              null,
-      Application_Status          char(1)              null,
-      Application_Fee_Exempt      char(1)              null,
-      Regulatory_Fee_Exempt       char(1)              null,
-      Source                      char(1)              null,
-      requested_expiration_date_mmdd  char(4)              null,
-      Receipt_Date                char(10)             null,
-      Notification_Code           char(1)              null,
-      Notification_date           char(10)             null,
-      Expanding_Area_or_Contour   char(1)              null,
-      Change_Type                 char(1)              null,
+      Record_Type                   char(2)              null,
+      unique_system_identifier      numeric(9,0)         not null,
+      ULS_File_Number               char(14)             null,
+      EBF_Number                    varchar(30)          null,
+      Application_Purpose           char(2)              null,
+      Application_Status                  char(1)              null,
+      Application_Fee_Exempt        char(1)              null,
+      Regulatory_Fee_Exempt         char(1)              null,
+      Source                        char(1)              null,
+      requested_expiration_date_mmdd      char(4)              null,
+      Receipt_Date                  char(10)             null,
+      Notification_Code             char(1)              null,
+      Notification_date             char(10)             null,
+      Expanding_Area_or_Contour     char(1)              null,
+      Change_Type                   char(1)              null,
       Original_Application_Purpose  char(2)              null,
-      Requesting_A_Waiver         char(1)              null,
-      How_Many_Waivers_Requested  int                  null,
-      Any_Attachments             char(1)              null,
-      Number_of_Requested_SIDs    int                  null,
-      fee_control_num             char(16)             null,
-      date_entered                char(10)             null,
-      reason                      varchar(255)         null,
-      frequency_coordination_indicat  char(1)              null,
-      emergency_sta               char(1)              null,
-      overall_change_type         char(1)              null,
-      slow_growth_ind             char(1)              null,
-      previous_waiver             char(1)              null,
-      waiver_deferral_fee         char(1)              null,
-      has_term_pending_ind    char(1)        null
+      Requesting_A_Waiver           char(1)              null,
+      How_Many_Waivers_Requested    int                  null,
+      Any_Attachments               char(1)              null,
+      Number_of_Requested_SIDs      int                  null,
+      fee_control_num               char(16)             null,
+      date_entered                  char(10)             null,
+      reason                        varchar(255)         null,
+      frequency_coordination_indicat      char(1)              null,
+      emergency_sta                 char(1)              null,
+      overall_change_type           char(1)              null,
+      slow_growth_ind               char(1)              null,
+      previous_waiver               char(1)              null,
+      waiver_deferral_fee           char(1)              null,
+      has_term_pending_ind          char(1)                null
 );
+
 
 create table uls_AG
 (
@@ -70,17 +69,17 @@ create table uls_AG
       unique_system_identifier  numeric(9,0)         not null,
       uls_file_number           char(14)             null,
       ebf_number                varchar(30)          null,
-      action_requested    char(1)        null,
-      agreement_type    char(2)        null,
-      agreement_name    varchar(50)      null,
-      des_ent_or_closed_bid_impact char(1)       null,
-      reserved_for_future char(1)        null,
-      mod_to_rev    char(1)        null                 
+      action_requested        char(1)                null,
+      agreement_type          char(2)          null,
+      agreement_name          varchar(50)      null,
+      des_ent_or_closed_bid_impact char(1)           null,
+      reserved_for_future     char(1)                null,
+      mod_to_rev        char(1)                null                                             
 );
 
 create table uls_AH
 (
-      record_type   char(2)        not null,
+      record_type       char(2)                not null,
       unique_system_identifier  numeric(9,0)         null,
       uls_file_num              char(14)             null,
       attachment_desc           varchar(60)          null, 
@@ -111,17 +110,17 @@ create table uls_AM
 
 create table uls_AN
 (
-      record_type               char(2)              null,
+      record_type                   char(2)              null,
       unique_system_identifier  numeric(9,0)         not null,
       uls_file_number           char(14)             null,
       ebf_number                varchar(30)          null,
-      call_sign                 char(10)             null,
+      call_sign                     char(10)             null,
       antenna_action_performed  char(1)              null,
       antenna_number            int                  null,
       location_number           int                  null,
       receive_zone_code         char(6)              null,
       antenna_type_code         char(1)              null,
-      height_to_tip             numeric(5,1)         null,
+      height_to_tip                 numeric(5,1)         null,
       height_to_center_raat     numeric(5,1)         null,
       antenna_make              varchar(25)          null,
       antenna_model             varchar(25)          null,
@@ -145,12 +144,11 @@ create table uls_AN
       alternative_cgsa_method   char(1)              null,
       path_number               int                  null,
       line_loss                 numeric(3,1)         null,
-      status_code   char(1)        null,
-      status_date   timestamp       null,
+      status_code       char(1)                null,
+      status_date       timestamp         null,
       psd_nonpsd_methodology    varchar(10)          null,
       maximum_erp               numeric(15,3)        null
 );
-
 
 
 create table uls_AP
@@ -159,16 +157,15 @@ create table uls_AP
       unique_system_identifier  numeric(9,0)         not null,
       uls_file_number           char(14)             null,
       ebf_number                varchar(30)          null,
-      agreement_name    varchar(50)      null,
-      action_requested    char(1)        null,
-      legal_entity_name   varchar(50)      null,
-      first_name    varchar(20)      null,
+      agreement_name          varchar(50)      null,
+      action_requested        char(1)                null,
+      legal_entity_name       varchar(50)      null,
+      first_name        varchar(20)      null,
       mi                        char(1)              null,
       last_name                 varchar(20)          null,
       suffix                    char(3)              null,
-      FCC_reg_number          char(10)       null 
+      FCC_reg_number            char(10)       null   
 );
-
 create table uls_AS
 (
       record_type               char(2)              not null,
@@ -177,11 +174,10 @@ create table uls_AS
       ebf_number                varchar(30)          null,
       callsign                  char(10)             null,
       assoc_callsign            char(10)             null,
-      status_code   char(1)        null,
-      status_date   timestamp       null,
-      action_performed    char(1)              null
-); 
-
+      status_code       char(1)                null,
+      status_date       timestamp         null,
+      action_performed        char(1)              null
+);
 
 create table uls_AT
 (
@@ -195,7 +191,6 @@ create table uls_AT
       attachment_file_name      varchar(60)          null,
       attachment_action_performed char(1)            null
 );
-
 
 create table uls_BC
 (
@@ -213,8 +208,6 @@ create table uls_BC
 );
 
 
-
-
 create table uls_BD
 (
       record_type               char(2)              not null,
@@ -227,7 +220,7 @@ create table uls_BD
       credits_paid              char(1)              null,
       bc_same_elig_status       char(1)              null,
       bc_diff_elig_status       char(1)              null,
-      bc_dnq_elig_status  char(1)              null,
+      bc_dnq_elig_status      char(1)              null,
       payments                  char(1)              null,
       ip_same_elig_status       char(1)              null,
       ip_diff_elig_status       char(1)              null,
@@ -235,27 +228,25 @@ create table uls_BD
       closed_notification       char(1)              null,
       qualifies_for_cb          char(1)              null,
       dnq_for_cb                char(1)              null,
-      bc_ten_percent    char(1)              null,
-      bc_affiliate    char(1)              null,
-      bc_cont_elig    char(1)              null,
-      bc_shared     char(1)              null,
-      document      char(1)              null,
-      ip_ten_percent    char(1)              null,  
-      ip_affiliate    char(1)              null, 
-      ip_cont_elig    char(1)              null,
-      ip_shared     char(1)              null,
-      sec_date      char(10)              null,
-      lien_date     char(10)              null,
-      cb_ten_percent    char(1)              null,
-      cb_affiliate    char(1)              null,
-      cb_cont_elig    char(1)              null,
-      cb_shared     char(1)              null,
-    bidding_credit_type char(1) null,
-      bidding_credit_percent char(3)  null,
+      bc_ten_percent          char(1)              null,
+      bc_affiliate            char(1)              null,
+      bc_cont_elig            char(1)              null,
+      bc_shared               char(1)              null,
+      document                char(1)              null,
+      ip_ten_percent          char(1)              null,    
+      ip_affiliate            char(1)              null, 
+      ip_cont_elig            char(1)              null,
+      ip_shared               char(1)              null,
+      sec_date                char(10)              null,
+      lien_date               char(10)              null,
+      cb_ten_percent          char(1)              null,
+      cb_affiliate            char(1)              null,
+      cb_cont_elig            char(1)              null,
+      cb_shared               char(1)              null,
+        bidding_credit_type char(1) null,
+      bidding_credit_percent char(3)      null,
       bc_spectrum_capacity char(1)  null
 );
-
-
 
 
 create table uls_BE
@@ -265,10 +256,10 @@ create table uls_BE
       uls_file_number             char(14)             null,
       ebf_number                  varchar(30)          null,
       callsign                    char(10)             null,
-      multichannel      char(1)        null,
-      cable_tv        char(1)        null,
-      programming_requirements    char(1)        null,
-      interference_protection   char(1)        null
+      multichannel              char(1)          null,
+      cable_tv                  char(1)          null,
+      programming_requirements        char(1)          null,
+      interference_protection   char(1)          null
 
 );
 
@@ -286,12 +277,10 @@ create table uls_BF
       buildout_code             int                  null,
       buildout_deadline         char(10)             null,
       buildout_date             char(10)             null,
-      status_code   char(1)        null,
-      status_date   timestamp       null,
-      frequency_number          int        null
+      status_code       char(1)                null,
+      status_date       timestamp         null,
+      frequency_number          int            null
 );
-
-
 
 
 create table uls_BL
@@ -303,10 +292,9 @@ create table uls_BL
       buildout_code             int                  null,
       buildout_deadline         char(10)             null,
       buildout_date             char(10)             null,
-      status_code   char(1)        null,
-      status_date   timestamp       null
+      status_code       char(1)                null,
+      status_date       timestamp         null
 );
-
 
 create table uls_BO
 (
@@ -316,10 +304,9 @@ create table uls_BO
       buildout_code             int                  null,
       buildout_deadline         char(10)             null,
       buildout_date             char(10)             null,
-      status_code   char(1)        null,
-      status_date   timestamp       null
+      status_code       char(1)                null,
+      status_date       timestamp         null
 );
-
 
 create table uls_BT
 (
@@ -327,24 +314,23 @@ create table uls_BT
       unique_system_identifier  numeric(9,0)         not null,
       ULS_File_Number           char(14)             null,
       EBF_Number                varchar(30)          null,
-      Applicant_Status    char(1)              null
-          
+      Applicant_Status        char(1)              null
+                  
 );
 
 create table uls_CD
 (
-  Record_Type     char(2)   null,
-  Unique_System_Identifier  numeric(9,0)  not null,
-  ULS_File_Number     char(14)  null,
-  EBF_Number      varchar(30) null,
-  Year_Sequence     smallint  not null,
-  Gross_Revenues      money   null,
-  Year_End_Date     timestamp  null,
-  Aggregate_Gros_Rvn_DE   money   null,
-  Aggregate_Gros_Rvn_CB   money   null,
-  Total_Assets      money   null                
+      Record_Type             char(2)           null,
+      Unique_System_Identifier      numeric(9,0)      not null,
+      ULS_File_Number               char(14)    null,
+      EBF_Number              varchar(30) null,
+      Year_Sequence                 smallint    not null,
+      Gross_Revenues                money       null,
+      Year_End_Date                 timestamp    null,
+      Aggregate_Gros_Rvn_DE         money       null,
+      Aggregate_Gros_Rvn_CB         money       null,
+      Total_Assets                  money       null                                            
 );
-
 
 create table uls_CF
 (
@@ -361,12 +347,11 @@ create table uls_CF
       Frequency_Upper_Band              numeric(16,8)        null,
       number_of_mobiles                 int                  null,
       action_performed                  char(1)              null,
-      actual_date_of_construction       timestamp       null,
+      actual_date_of_construction       timestamp           null,
       frequency_number                  int                  null,
       Assign_Callsign                   char(10)             null 
 
 );
-
 
 create table uls_CG
 (
@@ -411,10 +396,9 @@ create table uls_CG
       coast_ground_identifier   char(12)             null,
       selective_call_sign_identifier char(4)         null,
       station_class             char(4)              null,
-      status_code   char(1)              null,
-      status_date   timestamp       null
+      status_code       char(1)                  null,
+      status_date       timestamp         null
 );
-
 
 create table uls_CO
 (
@@ -424,10 +408,9 @@ create table uls_CO
       callsign                  char(10)             null,
       comment_date              char(10)             null,
       description               varchar(255)         null,
-      status_code   char(1)        null,
-      status_date   timestamp             null
+      status_code       char(1)                null,
+      status_date       timestamp             null
 );
-
 
 create table uls_CP
 (
@@ -443,10 +426,9 @@ create table uls_CP
       state_code                char(2)              null,
       control_phone             char(10)             null,
       control_county            varchar(60)          null,
-      status_code   char(1)        null,
-      status_date   timestamp       null
+      status_code       char(1)                null,
+      status_date       timestamp         null
 );
-
 
 create table uls_CS
 (
@@ -460,10 +442,9 @@ create table uls_CS
       coser_result              char(5)              null,
       coser_num                 char(10)             null,
       coser_activity_type       char(1)              null,
-      status_code   char(1)        null,
-      status_date   timestamp       null
+      status_code       char(1)                null,
+      status_date       timestamp         null
 );
-
 
 create table uls_EM
 (
@@ -480,11 +461,10 @@ create table uls_EM
       digital_mod_rate          numeric(8,1)         null,
       digital_mod_type          char(255)            null,
       frequency_number          int                  null,
-      status_code   char(1)        null,
-     status_date    timestamp       null,
+      status_code       char(1)                null,
+     status_date        timestamp         null,
      emission_sequence_id       int                  null
 );
-
 
 create table uls_EN
 (
@@ -513,10 +493,9 @@ create table uls_EN
       frn                       char(10)             null,
       applicant_type_code       char(1)              null,
       applicant_type_other      char(40)             null,
-      status_code               char(1)        null,
-      status_date   timestamp       null
+      status_code               char(1)              null,
+      status_date       timestamp         null
 );
-
 
 
 create table uls_F2
@@ -532,12 +511,12 @@ create table uls_F2
       frequency_number          int                  null,
       frequency_assigned        numeric(16,8)        null,
       frequency_upper_band      numeric(16,8)        null,
-      "offset"                  char(3)              null,
+      "offset"                    char(3)              null,
       frequency_channel_block   char(4)              null,
-      equipment_class         char(2)              null, 
-      minimum_power_output  numeric(15,3)        null,
-      status_code   char(1)        null,
-      status_date   timestamp       null,
+      equipment_class           char(2)              null, 
+      minimum_power_output    numeric(15,3)        null,
+      status_code       char(1)                null,
+      status_date       timestamp         null,
       trans_meth                char(1)              null
 );
 
@@ -564,7 +543,6 @@ create table uls_FA
       proof_of_passing          char(1)              null 
 );
 
-
 create table uls_FC
 (
       record_type               char(2)              null,
@@ -577,7 +555,6 @@ create table uls_FC
       freq_coordination_date    char(10)             null,
       action_performed          char(1)              null
 );
-
 
 create table uls_FF
 (
@@ -592,10 +569,9 @@ create table uls_FF
       unique_freq_freeform_id   numeric(9,0)         null ,
       sequence_number           int                  null ,
       freq_freeform_condition   varchar(255)         null,
-      status_code   char(1)        null,
-      status_date   timestamp       null
-); 
-
+      status_code       char(1)                null,
+      status_date       timestamp         null
+);
 
 create table uls_FR
 (
@@ -626,11 +602,10 @@ create table uls_FR
       cnt_mobile_units          int                  null,
       cnt_mob_pagers            int                  null,
       freq_seq_id               int                  null,
-      status_code   char(1)        null,
-      status_date   timestamp       null,
-      date_first_used   timestamp       null
+      status_code       char(1)                null,
+      status_date       timestamp         null,
+      date_first_used         timestamp         null
 );
-
 
 create table uls_FS
 (
@@ -643,11 +618,10 @@ create table uls_FS
       frequency_number          int                  null,
       special_condition_type    char(1)              null,
       special_condition_code    int                  null,
-      status_code   char(1)        null,
-      status_date   timestamp       null
+      status_code       char(1)                null,
+      status_date       timestamp         null
       
 );
-
 
  create table uls_FT
 (
@@ -665,7 +639,6 @@ create table uls_FS
 
 );
 
-
 create table uls_HD
 (
       record_type               char(2)              not null,
@@ -681,7 +654,7 @@ create table uls_HD
       eligibility_rule_num      char(10)             null,
       applicant_type_code_reserved       char(1)              null,
       alien                     char(1)              null,
-      alien_government          char(1)              null,
+      alien_vernment          char(1)              null,
       alien_corporation         char(1)              null,
       alien_officer             char(1)              null,
       alien_control             char(1)              null,
@@ -717,9 +690,9 @@ create table uls_HD
       band_manager              char(1)              null,
       type_serv_broad_serv      char(1)              null,
       alien_ruling              char(1)              null,
-      licensee_name_change  char(1)        null
+      licensee_name_change    char(1)                null,
+      whitespace_ind            char(1)              null
 );
-
 
 create table uls_HS
 (
@@ -730,7 +703,6 @@ create table uls_HS
       log_date                  char(10)             null,
       code                      char(6)              null
 );
-
 
 create table uls_IA
 (
@@ -748,7 +720,6 @@ create table uls_IA
       international_fax         char(20)             null
 );
 
-
 create table uls_IR
 (
       record_type               char(2)              null,
@@ -762,11 +733,10 @@ create table uls_IR
       fas_docket_num            char(8)              null,
       fccm_num                  char(10)             null,
       faa_ng_num                char(11)             null,
-      status_code   char(1)        null,
-      status_date   timestamp       null,
-      a_irac_status_code  smallint           null
+      status_code       char(1)                null,
+      status_date       timestamp         null,
+      a_irac_status_code      smallint               null
 );
-
 
 create table uls_LA
  (
@@ -780,7 +750,6 @@ create table uls_LA
       action_performed          char(1)              Null
 );
 
-
 create table uls_L2
 (
       record_type               char(2)              not null,
@@ -788,19 +757,18 @@ create table uls_L2
       uls_file_number           char(14)             null,
       ebf_number                varchar(30)          null,
       call_sign                 char(10)             null,
-      location_action_performed char(1)              null,
+      location_action_performed     char(1)              null,
       location_number           int                  null,
-      registration_required char(1)              null,
-      protection_date   timestamp             null,
+      registration_required   char(1)              null,
+      protection_date         timestamp             null,
       link_reg_num              varchar(30)          null,
       link_reg_action_performed char(1)              null,
       mexico_clearance_indicator char(1)       null,
-      quiet_zone_consent        char(1)        null,  
-      status_code   char(1)        null,
-      status_date   timestamp       null
-  
+      quiet_zone_consent        char(1)              null,  
+      status_code       char(1)                null,
+      status_date       timestamp         null
+      
 );
-
 
 create table uls_LF
  (
@@ -812,20 +780,18 @@ create table uls_LF
       unique_loc_freeform_id    numeric(9,0)         null ,
       sequence_number           int                  null ,
       loc_freeform_condition    varchar(255)         null,
-      status_code   char(1)        null,
-      status_date   timestamp       null
+      status_code       char(1)                null,
+      status_date       timestamp         null
 );
-
 
 create table uls_LH
 (
-      record_type   char(2)        not null,
+      record_type       char(2)                not null,
       unique_system_identifier  numeric(9,0)         null,
       call_sign                 char(10)             null,
       attachment_desc           varchar(60)          null, 
       attachment_file_id        char(18)             null
 );
-
 
 create table uls_LM
 (
@@ -836,10 +802,9 @@ create table uls_LM
       callsign                  char(10)             null,
       ext_implement_appr        char(1)              null,
       lm_eligibility_activity   varchar(255)         null,
-      status_code   char(1)        null,
-      status_date   timestamp       null
+      status_code       char(1)                null,
+      status_date       timestamp         null
 );
-
 
 create table uls_LO
 (
@@ -866,7 +831,7 @@ create table uls_LO
       lat_minutes               int                  null,
       lat_seconds               numeric(3,1)         null,
       lat_direction             char(1)              null,
-      long_degrees              int                  null,
+      long_degrees              int                null,
       long_minutes              int                  null,
       long_seconds              numeric(3,1)         null,
       long_direction            char(1)              null,
@@ -891,13 +856,12 @@ create table uls_LO
       units_temp_fixed          int                  null,
       units_aircraft            int                  null,
       units_itinerant           int                  null,
-      status_code   char(1)        null,
-      status_date   timestamp       null,
+      status_code       char(1)                null,
+      status_date       timestamp         null,
       earth_agree               char(1)              null
 
 
 );
-
 
 create table uls_LS
 (
@@ -907,61 +871,55 @@ create table uls_LS
       location_number           int                  null,
       special_condition_type    char(1)              null,
       special_condition_code    int                  null,
-      status_code   char(1)        null,
-      status_date   timestamp       null
+      status_code       char(1)                null,
+      status_date       timestamp         null
 );
-
 
 create table uls_MC
 (
-      record_type                   char(2)              null,
-      unique_system_identifier      numeric(9,0)         not null,
-      uls_file_number               char(14)             null,
-      ebf_number                    varchar(30)          null,
-      call_sign                     char(10)             null,
-      undefined_partitioned_area_id   numeric(9,0)         null,
-      partition_sequence_number     int                  null,
-      partition_lat_degrees         int                  null,
-      partition_lat_minutes         int                  null,
-      partition_lat_seconds         numeric(3,1)         null,
-      partition_lat_direction       char(1)              null,
-      partition_long_degrees        int                  null,
-      partition_long_minutes        int                  null,
-      partition_long_seconds        numeric(3,1)         null,
-      partition_long_direction      char(1)              null,
-    undefined_partitioned_area    int          null
+      record_type                         char(2)              null,
+      unique_system_identifier            numeric(9,0)         not null,
+      uls_file_number                     char(14)             null,
+      ebf_number                          varchar(30)          null,
+      call_sign                                 char(10)             null,
+      undefined_partitioned_area_id       numeric(9,0)         null,
+      partition_sequence_number           int                  null,
+      partition_lat_degrees               int                  null,
+      partition_lat_minutes               int                  null,
+      partition_lat_seconds               numeric(3,1)         null,
+      partition_lat_direction             char(1)              null,
+      partition_long_degrees              int                  null,
+      partition_long_minutes              int                  null,
+      partition_long_seconds              numeric(3,1)         null,
+      partition_long_direction            char(1)              null,
+        undefined_partitioned_area        int                            null
 );
-
-
 
 
 create table uls_ME
 (
-      record_type               char(2)              not null,
+      record_type                   char(2)              not null,
       unique_system_identifier  numeric(9,0)         not null,
       uls_file_number           char(14)             null,
-      ebf_number                varchar(30)          null,
-      callsign                  char(10)             null,
-      mea_number        char(6)          null,
-      action_performed      char(1)            null 
+      ebf_number                    varchar(30)          null,
+      callsign                      char(10)             null,
+      mea_number                    char(6)                  null,
+      action_performed              char(1)                        null 
 );
-
 
 
 create table uls_MH
 (
       record_type                char(2)            not null,
-      unique_system_identifier   numeric(9,0)       not null,
-      uls_file_number            char(14)           null,
-      ebf_number                 varchar(30)        null,
-      callsign                   char(10)           null,
-      action_performed       char(1)        null,
-      channel_plan_number    char(4)        null,
-      channel_plan         char(1)      null
+      unique_system_identifier       numeric(9,0)       not null,
+      uls_file_number                char(14)           null,
+      ebf_number                     varchar(30)        null,
+      callsign                       char(10)           null,
+      action_performed               char(1)          null,
+      channel_plan_number            char(4)          null,
+      channel_plan                         char(1)                null
 
 );
-
-
 
 
 create table uls_MF
@@ -971,13 +929,12 @@ create table uls_MF
       uls_file_number           char(14)        null,
       ebf_number                varchar(30)     null,
       call_sign                 char(10)        null,
-      partition_area_id     numeric(9,0)  null,
-      lower_frequency           numeric(16,8)   null,
-      upper_frequency           numeric(16,8)   null,
-      def_und_ind       char(1)   null,
-    defined_partition_area  char(6)   null
+      partition_area_id             numeric(9,0)      null,
+      lower_frequency               numeric(16,8)   null,
+      upper_frequency               numeric(16,8)   null,
+      def_und_ind                   char(1)           null,
+        defined_partition_area      char(6)           null
 );
-
 
 create table uls_MI
 (
@@ -990,7 +947,6 @@ create table uls_MI
       statement_of_intention    char(1)              null,
       license_type_code         char(1)              null
 );
-
 
 create table uls_MK
 (
@@ -1012,32 +968,31 @@ create table uls_MK
       additional_credit_requested money              null,
       tribal_credit_awarded     money                null,
       additiona_credit_awarded  money                null,
-      bc_pct      numeric(5,4)       null,
-      open_closed_bidding char(1)        null,
-      bidding_credit_type       char(1)              null,
+      bc_pct                  numeric(5,4)           null,
+      open_closed_bidding     char(1)                null,
+      bidding_credit_type       char(1)                null,
       claiming_unserved_area  char(1)              null
 );
 
-
 create table uls_MP
 (
-      record_type               char(2)         null,
-      unique_system_identifier    numeric(9,0)    not null,
-      uls_file_number             char(14)        null,
-      ebf_number                  varchar(30)     null,
-      call_sign                   char(10)        null,
-      market_partition_code       char(6)         null,
-      defined_partition_area      varchar(60)     null,
-      defined_area_population     numeric(9,0)  null,
-      include_exclude_ind         char(1)         null,
-      partition_sequence_area_id  numeric(9,0)             null,
-      action_performed        char(1)         null,
-      census_figures                int       null,
-      def_undef_ind         char(1)     null,
-    partition_sequence_number   int       null
-    
+      record_type                   char(2)         null,
+      unique_system_identifier            numeric(9,0)    not null,
+      uls_file_number                     char(14)        null,
+      ebf_number                          varchar(30)     null,
+      call_sign                     char(10)        null,
+      market_partition_code               char(6)         null,
+      defined_partition_area        varchar(60)     null,
+      defined_area_population             numeric(9,0)      null,
+      include_exclude_ind           char(1)         null,
+      partition_sequence_area_id    numeric(9,0)             null,
+      action_performed                    char(1)         null,
+      census_figures                int                     null,
+      def_undef_ind                             char(1)                 null,
+        partition_sequence_number   int               null,
+        whitespace_ind          char(1)         null
+        
 );
-
 
 create table uls_MW
 (
@@ -1053,10 +1008,9 @@ create table uls_MW
       smsa_code                 char(6)              null,
       station_class             char(4)              null,
       cum_effect_is_major       char(1)              null,
-      status_code   char(1)        null,
-      status_date   timestamp       null
+      status_code       char(1)                null,
+      status_date       timestamp         null
 );
-
 
 create table uls_OP
 
@@ -1071,10 +1025,9 @@ create table uls_OP
       location_number           int                  null,
       area_text_sequence_num    int                  null,
       area_of_operation         varchar(255)         null,
-      status_code   char(1)        null,
-      status_date   timestamp       null
+      status_code       char(1)                null,
+      status_date       timestamp         null
 );
-
 
 create table uls_PA
 (
@@ -1095,13 +1048,12 @@ create table uls_PA
       country_code              char(3)              null,
       interference_to_gso       char(1)              null,
       receiver_callsign         varchar(10)          null,
-      angular_sep   numeric(3,2)         null,
-      cert_no_alternative char(1)        null,
-      cert_no_interference  char(1)        null,
-  status_code   char(1)     null,
-  status_date   timestamp    null
+      angular_sep       numeric(3,2)         null,
+      cert_no_alternative     char(1)                null,
+      cert_no_interference    char(1)          null,
+      status_code       char(1)                 null,
+      status_date       timestamp          null
 );
-
 
 create table uls_PC
 (
@@ -1126,10 +1078,9 @@ create table uls_PC
       long_seconds              numeric(3,1)         null,
       long_direction            char(1)              null,
       point_of_com_frequency    numeric(16,8)        null,
-  status_code   char(1)     null,
-  status_date   timestamp    null
+      status_code       char(1)                 null,
+      status_date       timestamp          null
 );
-
 
 create table uls_RA
 (
@@ -1149,10 +1100,9 @@ create table uls_RA
       radial_erp                numeric(7,3)         null,
       dist_to_sab               numeric(4,1)         null,
       dist_to_cgsa              numeric(4,1)         null,
-  status_code   char(1)     null,
-  status_date   timestamp    null
+      status_code       char(1)                 null,
+      status_date       timestamp          null
 );
-
 
 create table uls_RC
 (
@@ -1166,13 +1116,12 @@ create table uls_RC
       antenna_number            int                  null,
       receiver_make             varchar(25)          null,
       receiver_model            varchar(25)          null,
-      receiver_stability  numeric(6,5)         null,
-      receiver_noise_figure numeric(5,2)         null,
-  status_code   char(1)     null,
-  status_date   timestamp    null
+      receiver_stability      numeric(6,5)         null,
+      receiver_noise_figure   numeric(5,2)         null,
+      status_code       char(1)                 null,
+      status_date       timestamp          null
 
 );
-
 
 create table uls_RE
 (
@@ -1183,19 +1132,18 @@ create table uls_RE
       Reason                    varchar(255)         null
 );
 
-
 create table uls_RI
 (
-  Record_Type                 char(2)               not null,
-      unique_system_identifier    numeric(9,0)          not null,
-        ULS_File_Number           char(14)              null,
-        EBF_Number                varchar(30)           null,
-  Entity_Type     char(1)     not null,
-  Year_Sequence_ID    smallint    not null,
-        Gross_Revenues      money     null,
-  Year_End_Date     timestamp    not null,
-  Average_Gross_Revenues    money     null,
-  Asset_Disclosure    money     null,
+      Record_Type                   char(2)                 not null,
+      unique_system_identifier      numeric(9,0)            not null,
+            ULS_File_Number               char(14)                null,
+            EBF_Number                    varchar(30)             null,
+      Entity_Type             char(1)                 not null,
+      Year_Sequence_ID        smallint          not null,
+        Gross_Revenues              money             null,
+      Year_End_Date                 timestamp          not null,
+      Average_Gross_Revenues        money             null,
+      Asset_Disclosure        money             null,
         Statement_Type                  char(1)                 not null,
         In_Existence                    char(1)                 null
 );
@@ -1215,7 +1163,6 @@ create table uls_RZ
       receive_zone              char(6)              null
 );
 
-
 create table uls_SC
 (
 
@@ -1227,10 +1174,9 @@ create table uls_SC
       callsign                  char(10)             null ,
       special_condition_type    char(1)              null,
       special_condition_code    int                  null,
-  status_code   char(1)     null,
-  status_date   timestamp    null
+      status_code       char(1)                 null,
+      status_date       timestamp          null
 );
-
 
 create table uls_SE
 
@@ -1282,7 +1228,6 @@ create table uls_SE
 
 
 
-
 create table uls_SF
 (
       record_type               char(2)              null ,
@@ -1294,8 +1239,8 @@ create table uls_SF
       unique_lic_freeform_id    numeric(9,0)         null ,
       sequence_number           int              null ,
       lic_freeform_condition    varchar(255)         null,
-  status_code   char(1)     null,
-  status_date   timestamp    null
+      status_code       char(1)                 null,
+      status_date       timestamp          null
 ); 
 
 
@@ -1316,10 +1261,9 @@ create table uls_SG
       receiver_antenna          int              null,
       segment_number            int              null,
       segment_length            numeric(12,6)        null,
-  status_code   char(1)     null,
-  status_date   timestamp    null
+      status_code       char(1)                 null,
+      status_date       timestamp          null
 );
-
 
 create table uls_SH
 (
@@ -1352,7 +1296,6 @@ create table uls_SH
       required_cat_e            char(1)              null
 );
 
-
 create table uls_SI
 (
       record_type               char(2)              null,
@@ -1364,14 +1307,13 @@ create table uls_SI
       action_performed          char(1)              null
 );
 
-
 create table uls_SR
 (
       record_type               char(2)             null,
-      unique_system_identifier  numeric(9,0)      not null,
-      uls_file_number     char(14)            null,
+      unique_system_identifier      numeric(9,0)          not null,
+      uls_file_number         char(14)            null,
       ebf_number          varchar(30)         null,
-      call_sign                 char(10)            null,
+      call_sign                   char(10)            null,
       epirb_identification_code char(15)            null,  
       INMARSAT_A              char(1)             null,   
       INMARSAT_B                char(1)             null,     
@@ -1389,7 +1331,6 @@ create table uls_SR
       lifeboat_count            numeric(6,0)        null,
       vessel_capacity           numeric(6,0)        null
 );
-
 
 create table uls_ST
 (
@@ -1410,7 +1351,6 @@ create table uls_ST
 );
 
 
-
 create table uls_SV
 
 (
@@ -1423,7 +1363,6 @@ create table uls_SV
       voyage_number             int              null,
       voyage_description        varchar(255)         null
 );
-
 
 
 
@@ -1447,7 +1386,7 @@ create table uls_TA
       assignee_gross_rev_2      money                null,
       assignee_gross_rev_3      money                null,
       assignee_tot_assets       money                null,
-      same_small_category       char(1)              null,
+      same_small_catery       char(1)              null,
       applying_for_installments char(1)              null,
       notification_of_forebearance char(1)           null,
       wireless_need_approval    char(1)              null,
@@ -1462,7 +1401,7 @@ create table uls_TA
       consent_date              char(10)             null,
       consummation_date         char(10)             null,
       consummation_deadline     char(10)             null,
-      eligibility_category      varchar(30)          null,
+      eligibility_catery      varchar(30)          null,
       other_wireless_file_num   char(14)             null,
       occurred                  char(1)              null,
       involuntary_date          char(10)             null,
@@ -1476,11 +1415,11 @@ create table uls_TA
       program_reqs              char(1)              null,
       ownership_required        char(1)              null,
       ownership_file_num        char(14)             null,
-      other_wireless_app  char(1)              null,
-      public_safety   char(1)              null,
-      tl_short_term   char(1)              null,
-      mw_link_ind   char(1)              null,
-    geo_overlap_600 char(1) null,
+      other_wireless_app      char(1)              null,
+      public_safety           char(1)              null,
+      tl_short_term           char(1)              null,
+      mw_link_ind       char(1)              null,
+        geo_overlap_600 char(1) null,
       rsv_spectrum_600 char(1) null,
       seek_rural_bc char(1) null
 );
@@ -1501,7 +1440,6 @@ create table uls_TL
       square_kilometers         numeric(8,0)         null
 );
 
-
 create table uls_UA
 (
       record_type               char(2)              not null,
@@ -1517,7 +1455,6 @@ create table uls_UA
       claiming_unserved_area    char(1)              null
 );
 
-
 create table uls_VC
 (
 
@@ -1531,20 +1468,18 @@ create table uls_VC
 );
 
 
-
 create table uls_LC
 (
       record_type               char(2)              null,
       unique_system_identifier  numeric(9,0)         not null,
       uls_file_number           char(14)             null,
       ebf_number                varchar(30)          null,
-      call_sign     char(10)             null,    
-      a_ls_class_code   char(2)              null,    
-      a_ls_allocation_type  char(1)              null, 
-      a_ls_term     char(1)              null
+      call_sign               char(10)             null,          
+      a_ls_class_code         char(2)              null,          
+      a_ls_allocation_type    char(1)              null, 
+      a_ls_term               char(1)              null
       
 );
-
 
 
 create table uls_LD
@@ -1553,7 +1488,7 @@ create table uls_LD
       unique_system_identifier  numeric(9,0)         not null,
       uls_file_number           char(14)             null,
       ebf_number                varchar(30)          null,
-      lease_id      char(10)             null,    
+      lease_id                char(10)             null,          
       issue_date                timestamp       null,
       expired_date              timestamp             null, 
       cancellation_date         timestamp             null,
@@ -1562,18 +1497,16 @@ create table uls_LD
 );
 
 
-
 create table uls_LL
 (
       record_type               char(2)              null,
       unique_system_identifier  numeric(9,0)         not null,
       uls_file_number           char(14)             null,
       ebf_number                varchar(30)          null,
-      call_sign     char(10)             null,    
-      lease_id      char(10)             null,      
+      call_sign               char(10)             null,          
+      lease_id                char(10)             null,      
       unique_system_identifier_2   numeric(9,0)         null     /*(the licensee) */
 );
-
 
 create table uls_L3
 (
@@ -1627,10 +1560,9 @@ create table uls_L3
       units_temp_fixed          int              null,
       units_aircraft            int              null,
       units_itinerant           int              null,
-      status_code   char(1)     null,
-      status_date   timestamp    null
+      status_code       char(1)                 null,
+      status_date       timestamp          null
 );
-
 
 
 create table uls_L4
@@ -1642,19 +1574,18 @@ create table uls_L4
       call_sign                 char(10)             null,
      lease_id                 char(10)             null, 
       ls_site_link_id           numeric(9,0)         null, 
-      location_action_performed char(1)              null,
+      location_action_performed     char(1)              null,
       location_number           int              null,
-      registration_required char(1)              null,
-      protection_date   timestamp             null,
+      registration_required   char(1)              null,
+      protection_date         timestamp             null,
       link_reg_num              varchar(30)          null,
       link_reg_action_performed char(1)              null,
       mexico_clearance_indicator char(1)       null,
-      quiet_zone_consent        char(1)              null,  
-  status_code   char(1)        null,
-  status_date   timestamp       null
-  
+      quiet_zone_consent        char(1)                null,      
+      status_code       char(1)                null,
+      status_date       timestamp         null
+      
 );
-
 
 
 create table uls_O2
@@ -1670,10 +1601,9 @@ create table uls_O2
       location_number           int              null,
       area_text_sequence_num    int              null,
       area_of_operation         varchar(255)         null,
-      status_code   char(1)     null,
-      status_date   timestamp    null
+      status_code       char(1)                 null,
+      status_date       timestamp          null
 );
-
 
 
 
@@ -1689,10 +1619,9 @@ create table uls_L5
       location_number           int              null,
       special_condition_type    char(1)              null,
       special_condition_code    int              null,
-      status_code   char(1)     null,
-      status_date   timestamp    null
+      status_code       char(1)                 null,
+      status_date       timestamp          null
 );
-
 
 
 create table uls_L6
@@ -1709,27 +1638,26 @@ create table uls_L6
       unique_loc_freeform_id    numeric(9,0)         null ,
       sequence_number           int              null ,
       loc_freeform_condition    varchar(255)         null,
-      status_code   char(1)     null,
-      status_date   timestamp    null
+      status_code       char(1)                 null,
+      status_date       timestamp          null
 );
-
 
 
 create table uls_A3
 (
-      record_type                char(2)              null,
+      record_type                    char(2)              null,
       unique_system_identifier  numeric(9,0)         not null,
       uls_file_number           char(14)             null,
       ebf_number                varchar(30)          null,
-      call_sign                 char(10)             null,
+      call_sign                     char(10)             null,
       lease_id                 char(10)             null, 
       ls_site_link_id           numeric(9,0)         null, 
       antenna_action_performed  char(1)              null,
       antenna_number            int              null,
-      location_number           int              null,
+      location_number               int              null,
       receive_zone_code         char(6)              null,
       antenna_type_code         char(1)              null,
-      height_to_tip             numeric(5,1)         null,
+      height_to_tip                 numeric(5,1)         null,
       height_to_center_raat     numeric(5,1)         null,
       antenna_make              varchar(25)          null,
       antenna_model             varchar(25)          null,
@@ -1753,10 +1681,9 @@ create table uls_A3
       alternative_cgsa_method   char(1)              null,
       path_number               int              null,
       line_loss                 numeric(3,1)         null,
-  status_code   char(1)     null,
-  status_date   timestamp    null      
+      status_code       char(1)                 null,
+      status_date       timestamp          null      
 );
-
 
 create table uls_F3
 (
@@ -1789,11 +1716,10 @@ create table uls_F3
       cnt_mobile_units          int              null,
       cnt_mob_pagers            int              null,
       freq_seq_id               int              null,
-  status_code   char(1)     null,
-  status_date   timestamp    null      
+      status_code       char(1)                 null,
+      status_date       timestamp          null      
 
 );
-
 
 
 create table uls_F4
@@ -1807,19 +1733,18 @@ create table uls_F4
       ls_site_link_id           numeric(9,0)         null, 
       action_performed          char(1)              null, 
       location_number           int                  null,
-      antenna_number            int        null,
+      antenna_number            int            null,
       frequency_number          int                  null,
       frequency_assigned        numeric(16,8)        null,
       frequency_upper_band      numeric(16,8)        null,
       frequency_offset          char(3)              null,
       frequency_channel_block   char(4)              null,
-      equipment_class         char(2)              null, 
-      minimum_power_output  numeric(15,3)        null,
+      equipment_class           char(2)              null, 
+      minimum_power_output    numeric(15,3)        null,
       date_first_use            timestamp             null,
-  status_code   char(1)        null,
-  status_date   timestamp       null
+      status_code       char(1)                null,
+      status_date       timestamp         null
 );
-
 
 
 create table uls_F5
@@ -1835,11 +1760,10 @@ create table uls_F5
       frequency_number          int              null,
       special_condition_type    char(1)              null,
       special_condition_code    int              null,
-  status_code   char(1)     null,
-  status_date   timestamp    null
+      status_code       char(1)                 null,
+      status_date       timestamp          null
       
 );
-
 
 
 create table uls_F6
@@ -1859,10 +1783,9 @@ create table uls_F6
       unique_freq_freeform_id   numeric(9,0)         null ,
       sequence_number           int              null ,
       freq_freeform_condition   varchar(255)         null,
-      status_code   char(1)     null,
-      status_date   timestamp    null
-); 
-
+      status_code       char(1)                 null,
+      status_date       timestamp          null
+);
 
 
 create table uls_P2
@@ -1886,13 +1809,12 @@ create table uls_P2
       country_code              char(3)              null,
       interference_to_gso       char(1)              null,
       receiver_callsign         varchar(10)          null,
-      angular_sep   numeric(3,2)         null,
-      cert_no_alternative char(1)        null,
-      cert_no_interference  char(1)        null,
-  status_code   char(1)     null,
-  status_date   timestamp    null
+      angular_sep       numeric(3,2)         null,
+      cert_no_alternative     char(1)                null,
+      cert_no_interference    char(1)          null,
+      status_code       char(1)                 null,
+      status_date       timestamp          null
 );
-
 
 create table uls_TP
 (
@@ -1905,38 +1827,18 @@ create table uls_TP
       antenna_number            integer              null,
       frequency_number          integer              null,
       freq_proto_seq_id         integer              null,
-      freq_proto_code_desc  varchar(40)      not null,
+      freq_proto_code_desc    varchar(40)      not null,
       a_freq_proto_other        varchar(255)         null,
       action_performed          char(1)              null, 
-      status_code   char(1)     null,
-      status_date   timestamp    null
+      status_code       char(1)                 null,
+      status_date       timestamp          null
 );
 
-create table uls_ant_EN
-(
-      record_type               char(2)              not null,
-      record_subtype            char(3)              not null,
-      uls_file_number           char(8)              null,
-      tower_reg_num             char(7)              not null,
-      unique_system_identifier  numeric(9,0)         not null,
-      entity_type               char(1)              not null,
-      applicant_type            char(1)              null,
-      applicant_type_code       char(50)             null,
-      license_id                char(9)              null,
-      entity_name               varchar(200)         null,
-      first_name                varchar(50)          null,
-      mi                        char(1)              null,
-      last_name                 varchar(20)          null,
-      suffix                    char(3)              null,
-      phone                     char(10)             null,
-      fax                       char(10)             null,
-      email                     varchar(50)          null,
-      address_1                 varchar(60)          null,
-      address_2                 varchar(20)          null,
-      unknown_3                 varchar(20)          null,
-      city                      varchar(20)          null,
-      state                     char(2)              null,
-      zip_code                  char(9)              null,
-      attention_line            varchar(35)          null,
-      frn                       char(10)             null
-);
+-- Added by me for speed.
+CREATE UNIQUE INDEX ON uls_HD (unique_system_identifier);
+CREATE INDEX ON uls_HD (radio_service_code);
+CREATE INDEX ON uls_lo (unique_system_identifier);
+CREATE INDEX ON uls_fr (unique_system_identifier);
+CREATE INDEX ON uls_lo (unique_system_identifier, location_number);
+CREATE INDEX ON uls_lo (corresponding_fixed_location);
+CREATE INDEX ON uls_fr (unique_system_identifier, location_number);;

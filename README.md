@@ -32,7 +32,8 @@ Then use any of the service classes
 To get db/schema.sql from https://www.fcc.gov/sites/default/files/public_access_database_definitions_sql_v1.txt, make the following replacements:
 * 'dbo.PUBACC' => 'uls'
 * ')\n' => ');'
-* 'offset' => '"offset"'
+* 'go' => '';
+* 'offset' (whole word only) => '"offset"'
 * 'tinyint' => 'int'
 * 'datetime' => 'timestamp'
 
